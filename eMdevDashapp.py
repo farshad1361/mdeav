@@ -7,9 +7,13 @@ from dash import dcc
 from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
+import pickle as pickle
 
+pickle.HIGHEST_PROTOCOL = 4
+#a = pd.read_pickle("WorkFreqYear.pkl")
+with open('WorkFreqYear.pkl', "rb") as fh:
+  a = pickle.load(fh)
 
-a = pd.read_pickle("WorkFreqYear.pkl")
 b = a.groupby("Year")
 df = a[["Year","Count","Alpha term"]]
 df = df.sort_values(['Year', 'Count'], ascending=[True, False])

@@ -7,7 +7,7 @@ from dash import dcc
 from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
-import pickle5 as pickle
+import pickle as pickle
 
 pickle.HIGHEST_PROTOCOL = 4
 

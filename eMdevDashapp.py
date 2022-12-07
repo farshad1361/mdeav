@@ -10,9 +10,7 @@ import plotly.graph_objects as go
 import pickle as pickle
 
 pickle.HIGHEST_PROTOCOL = 4
-
-with open('WorkFreqYear.pkl', "rb") as fh:
-  a = pickle.load(fh)
+a = pickle.load(open('WorkFreqYear.pkl','rb'))
 
 
 b = a.groupby("Year")

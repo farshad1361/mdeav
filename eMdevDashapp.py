@@ -7,11 +7,10 @@ from dash import dcc
 from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
-import pickle as pickle
 
 
-a = pickle.load(open('WorkFreqYear.pkl','rb'))
 
+a = pd.read_pickle("WorkFreqYear.pkl")
 
 b = a.groupby("Year")
 df = a[["Year","Count","Alpha term"]]

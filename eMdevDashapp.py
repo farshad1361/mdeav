@@ -11,7 +11,9 @@ import pickle as pickle
 
 pickle.HIGHEST_PROTOCOL = 4
 
-a = pd.read_pickle("WorkFreqYear.pkl")
+with open('WorkFreqYear.pkl', "rb") as fh:
+  a = pickle.load(fh)
+
 
 b = a.groupby("Year")
 df = a[["Year","Count","Alpha term"]]

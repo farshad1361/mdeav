@@ -9,7 +9,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pickle as pickle
 
-pickle.HIGHEST_PROTOCOL = 4
+
 a = pickle.load(open('WorkFreqYear.pkl','rb'))
 
 

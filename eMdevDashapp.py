@@ -7,7 +7,7 @@ from dash import dcc
 from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
-import pickle as pickle
+import pickle5 as pickle
 
 pickle.HIGHEST_PROTOCOL = 4
 #a = pd.read_pickle("WorkFreqYear.pkl")
